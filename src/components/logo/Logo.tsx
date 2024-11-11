@@ -1,10 +1,11 @@
 import React from "react";
 import styled from 'styled-components';
+import { Icon } from "../ icon/Icon";
 
 export const Logo = () => {
     return (
         <a href="">
-            <img src="" alt="" />
+            <Icon iconId={'logo'}/>
         </a>
     )
 }

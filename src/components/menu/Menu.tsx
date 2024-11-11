@@ -4,7 +4,7 @@ import styled from 'styled-components';
 export const Menu = () => {
     return (
         <div>
-            <nav>
+            <StyledMenu>
                 <ul>
                     <li>
                         <a href="">Home</a>
@@ -16,12 +16,20 @@ export const Menu = () => {
                         <a href="">Services</a>
                     </li>
                 </ul>
-            </nav>
-            <a href="">Contact Me</a>
+            </StyledMenu> 
         </div>
     )
 }
 
 const StyledMenu = styled.nav`
-    
+    ul{
+        display: flex;
+        gap: 30px;
+    }
+    li{
+        list-style: none;
+    }
+    a{
+        text-decoration: none;
+    }
 `
