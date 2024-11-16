@@ -1,29 +1,25 @@
 import React from 'react';
 import styled from 'styled-components';
 import {SectionTitle} from "../../../components/SectionTitle";
-import {Menu} from "../../../components/menu/Menu";
 import { FlexWrapper } from '../../../components/FlexWrapper';
-// import {Work} from './work/Work';
-
-const workItems = ["Front End Developer","UI/UX Designer","Branding Designer"]
+import {Work} from './work/Work';
 
 export const Works = () => {
     return (
         <StyledWorks>
-            <h3><span>2</span>Years Experience Working</h3>
-            <SectionTitle>Developer and Designer, specialized in 
-            Frontend and UI/UX</SectionTitle>
-            <FlexWrapper>
-                <Menu  menuItems={workItems}/>
-                {/* <Work title={"Front End Developer"} text={"1"} />
-                <Work title={"UI/UX Designer"} text={"2"} />
-                <Work title={"Branding Designer"} text={"3"} > */}
+            <span><span>2+</span>Years Experience Working</span>
+            <FlexWrapper  justify={"center"} wrap={"wrap"} gap={"10px"}  direction={"column"}>
+                <SectionTitle>Developer and Designer, specialized in Frontend and UI/UX</SectionTitle>
+                <FlexWrapper justify={"center"} wrap={"wrap"} gap={"10px"}>
+                    <Work iconId={"computer"} title={"Front End Developer"}  backgroundColor={"#676CDB"} />
+                    <Work iconId={"uiUx"} title={"UI/UX Designer"}  backgroundColor={"#C4C4C4"} color={"black"}/>
+                    <Work iconId={"thunder"} title={"Branding Designer"} backgroundColor={"#C4C4C4"} color={"black"}/>
+                </FlexWrapper>
             </FlexWrapper>
         </StyledWorks>
     )
 }
 
 const StyledWorks  = styled.section`
-    min-height: 100vh;
     background-color: #419cc9;
 `

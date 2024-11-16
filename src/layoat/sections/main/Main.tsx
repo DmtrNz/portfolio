@@ -13,15 +13,13 @@ export const Main = () => {
                     <a href="#" target=".blank">Email me</a>
                     <a href="#" target=".blank">Dowmload CV</a>
                 </div>
-                <div>
-                    <Photo src={photo} alt="Nazarov Dmitry" />
-                </div>
+                <Photo src={photo} alt="Nazarov Dmitry" />
             </FlexWrapper>
         </StyledMain>
     )
 }
 
-const StyledMain = styled.div`
+const StyledMain = styled.section`
     background-color:  #fff5e7;
 `;
 

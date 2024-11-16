@@ -2,7 +2,7 @@ import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import {SectionTitle} from "../../../components/SectionTitle";
 import { Skill } from './Skill';
-import {Icon} from "../../../components/ icon/Icon";
+
 
 export const Skills = () => {
     return (
@@ -29,7 +29,6 @@ export const Skills = () => {
     )
 }
 
-const StyledSkills = styled.div`
+const StyledSkills = styled.section`
     background-color: pink;
-    min-height: 100vh;
 `

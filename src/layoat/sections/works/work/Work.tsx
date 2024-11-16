@@ -1,34 +1,22 @@
 import styled from 'styled-components'; 
+import { Icon } from '../../../../components/ icon/Icon';
+import { StyledWork } from './StyledWork';
 
-// type WorkPropsType = {
-//     title: string;
-//     text: string;
-//     // src?: string;
-// }
 
-// export const Work = (props: WorkPropsType) => {
-//     return (
-//         <StyledWork>
-//             <Image src={props.src} alt=''/>
-//             <Title>{props.title}</Title>
-//             <Text>{props.text}</Text>
-//             <Link href={"#"}>demo</Link>
-//             <Link href={"#"}>code</Link>
-//         </StyledWork>
-//     )
-// }
+type WorkPropsType = {
+    iconId: string;
+    width?: string;
+    height?: string;
+    title: string;
+    backgroundColor: string;
+    color?: string;
+}
 
-// const StyledWork = styled.div`
-//     background-color: yellow;
-// `
-
-// // const Image = styled.img`
-    
-// // `
-// const Link = styled.a`
-    
-// `
-
-// const Image = styled.h3`
-    
-// `
+export const Work = (props: WorkPropsType) => {
+    return (
+        <StyledWork backgroundColor={props.backgroundColor} color={props.color}>
+            <Icon iconId={props.iconId} width={props.width} height={props.height}/>
+            <h3>{props.title}</h3>
+        </StyledWork>
+    )
+}
