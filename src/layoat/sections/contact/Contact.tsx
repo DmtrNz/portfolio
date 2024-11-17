@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Connect } from './Connect';
 import { Form } from './Form';
+import { SectionTitle } from '../../../components/SectionTitle';
 
 
 export const Contact = () => {
@@ -9,9 +10,9 @@ export const Contact = () => {
         <StyledContact>
             <FlexWrapper>
                 <FlexWrapper direction={"column"}>
-                    <h2>Let's Connect</h2>
+                <SectionTitle>Let's Connect</SectionTitle>
                     <FlexWrapper justify={"space-evenly"} wrap={"wrap"}>
-                        <ContactBox>
+                        <ConnectBox>
                             <Connect iconId={"dribble"}
                                 width={"25px"}
                                 height={"25px"} />
@@ -27,7 +28,7 @@ export const Contact = () => {
                             <Connect iconId={"gitHub"}
                                 width={"25px"}
                                 height={"25px"} />
-                        </ContactBox>
+                        </ConnectBox>
                     </FlexWrapper>
                 </FlexWrapper>
                 <Form />
@@ -39,7 +40,7 @@ export const Contact = () => {
 const StyledContact = styled.section`
     background-color: green;
 `
-const ContactBox = styled.ul`
+const ConnectBox = styled.ul`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
