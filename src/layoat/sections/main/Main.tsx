@@ -4,6 +4,7 @@ import photo from "./../../../assets/images/photo.webp";
 import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../styles/Container";
 import { theme } from "../../../styles/Theme";
+import { Icon } from "../../../components/ icon/Icon";
 
 export const Main = () => {
     return (
@@ -11,10 +12,21 @@ export const Main = () => {
             <Container>
                 <FlexWrapper align={"center"} justify={"space-between"} direction={"row"}>
                     <div>
-                        <SmallText>Hello! I'm Nazarov Dmitry</SmallText>
+                        <SmallText>Hello!</SmallText>
+                        <SmallText>I'm Nazarov Dmitry</SmallText>
                         <MainTitle>I am a <strong>Frontend developer</strong> based in Belarus <strong>with 2+ years of experience</strong> who loves creating React applications using TypeScript.</MainTitle>
-                        <a href="#" target=".blank">Email me</a>
-                        <a href="#" target=".blank">Dowmload CV</a>
+                        {/* <a href="#" target=".blank">Email me</a>
+                        <a href="#" target=".blank">Dowmload CV</a> */}
+                        <FlexWrapper margin={"50px 0 0 0 "}>
+                            <LinkMe href="#" target=".blank">
+                                <Icon iconId={"email"} width={"20px"} height={"20px"}/>
+                                <span>Email me</span>
+                            </LinkMe>
+                            <LinkMe href="#" target=".blank">
+                                <Icon iconId={"download"} width={"20px"} height={"20px"}/>
+                                <span>Dowmload CV</span>
+                            </LinkMe>
+                        </FlexWrapper>
                     </div>
                     <Photo src={photo} alt="Nazarov Dmitry" />
                 </FlexWrapper>
@@ -27,6 +39,33 @@ const StyledMain = styled.section`
     min-height: 100vh; 
     background-color: #fff5e7;
     display:  flex; 
+`
+
+const LinkMe = styled.a`
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: fit-content;
+
+    span{
+        padding: 0 0 0 10px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 1.2;
+        margin-right: 25px;
+    }
+
+    &:hover{
+        color: ${theme.colors.accent};
+        background-image: linear-gradient(to right, ${theme.colors.font}, ${theme.colors.accent});
+        background-clip: text;
+        transition: 0.5s;
+        transform: scale(1.05) translateY(-0.5px);
+    }
+
+    &:last-child{
+        text-decoration: underline;
+    }
 `
 
 const Photo = styled.img`
@@ -66,4 +105,9 @@ const SmallText = styled.h2`
     font-weight: 700;
     font-size: 90px;
     line-height: 120%;
+
+    &:nth-of-type(2) {
+        position: relative;
+        width: 150%;
+    }
 `

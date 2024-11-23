@@ -1,7 +1,7 @@
 import React from "react";
 import styled from 'styled-components';
-import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Icon } from "../../../components/ icon/Icon";
+import { theme } from "../../../styles/Theme";
 
 type ConnectPropsType ={
     iconId: string;
@@ -12,12 +12,33 @@ type ConnectPropsType ={
 export const Connect = (props: ConnectPropsType) => {
     return (
         <StyledSContact>
-            <Icon iconId={props.iconId} width={props.width} height={props.height}/>
+            <a>
+                <Icon iconId={props.iconId} width={props.width} height={props.height}/>
+            </a>
         </StyledSContact> 
     )
 }
 
 const StyledSContact = styled.li`
-    list-style-type: none;
+    width: 30px;
+    height: 30px;
+    border-radius:  50%;
+    background-color: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: ${theme.colors.accent};
+    &+li{
+        margin-left: 50px;
+    }
 
+    a{
+        color: ${theme.colors.accent};
+    }
+
+    a:hover{
+        color: ${theme.colors.font};
+        transform: scale(1.1) translateY(-3px);
+        transition: 0.25s;
+    }
 `

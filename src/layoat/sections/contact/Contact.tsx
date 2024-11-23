@@ -2,46 +2,60 @@ import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Connect } from './Connect';
 import { Form } from './Form';
-import { SectionTitle } from '../../../components/SectionTitle';
-
+import { Container } from '../../../styles/Container';
 
 export const Contact = () => {
     return (
         <StyledContact>
-            <FlexWrapper>
-                <FlexWrapper direction={"column"}>
-                <SectionTitle>Let's Connect</SectionTitle>
-                    <FlexWrapper justify={"space-evenly"} wrap={"wrap"}>
-                        <ConnectBox>
-                            <Connect iconId={"dribble"}
-                                width={"25px"}
-                                height={"25px"} />
-                            <Connect iconId={"upwork"}
-                                width={"25px"}
-                                height={"25px"} />
-                            <Connect iconId={"youtube"}
-                                width={"25px"}
-                                height={"25px"} />
-                            <Connect iconId={"linkedin"}
-                                width={"25px"}
-                                height={"25px"} />
-                            <Connect iconId={"gitHub"}
-                                width={"25px"}
-                                height={"25px"} />
-                        </ConnectBox>
+            <Container>
+                <FlexWrapper  justify={"space-between"} wrap={"wrap"}>
+                    <FlexWrapper direction={"column"} margin={"0 30px 0 0"}>
+                        <StyledTitleContactBox>
+                            <SectionTitleContact>Let's <br></br> Connect</SectionTitleContact>
+                            <img src="" alt="" />
+                        </StyledTitleContactBox>
+                        <FlexWrapper justify={"flex-start"} wrap={"wrap"}>
+                            <ConnectBox>
+                                <Connect iconId={"telegram"}
+                                    width={"25px"}
+                                    height={"25px"} />
+                                <Connect iconId={"vk"}
+                                    width={"25px"}
+                                    height={"25px"} />
+                                <Connect iconId={"linkedin"}
+                                    width={"25px"}
+                                    height={"25px"} />
+                                <Connect iconId={"gitHub"}
+                                    width={"25px"}
+                                    height={"25px"} />
+                            </ConnectBox>
+                        </FlexWrapper>
                     </FlexWrapper>
+                    <Form />
                 </FlexWrapper>
-                <Form />
-            </FlexWrapper>
-        </StyledContact>
+            </Container>
+        </StyledContact> 
     )
 }
 
-const StyledContact = styled.section`
-    background-color: green;
+const StyledContact = styled.section` 
+    
 `
 const ConnectBox = styled.ul`
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: flex-start;
+    margin-bottom: 50px;
+`
+const StyledTitleContactBox = styled.div`
+    margin: 0 0 30px 0;
+`
+
+const SectionTitleContact = styled.h2`
+    font-family: "Poppins", sans-serif;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-weight: 700;
+    font-size: 90px;
+    line-height: 120%;
 `

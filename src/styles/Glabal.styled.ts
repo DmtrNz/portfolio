@@ -23,6 +23,8 @@ export const GlobalStyle = createGlobalStyle`
 
     a{
         text-decoration: none;
+        color: ${theme.colors.font};
+        cursor: pointer;
     }
 
     ul{
@@ -32,6 +34,7 @@ export const GlobalStyle = createGlobalStyle`
     button{
         background-color: unset;
         border: none;
+        cursor: pointer;
     }
 
     section{
@@ -51,7 +54,7 @@ export const GlobalStyle = createGlobalStyle`
 }
 
     section:nth-of-type(4) {
-        background-color: ${theme.colors.primaryBg};
+        background-color: rgba(34, 42, 54, 0.95);
 }
 
     section:nth-of-type(5) {

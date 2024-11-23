@@ -10,10 +10,10 @@ export const Skills = () => {
         <StyledSkills>
             <Container>
                 <SectionTitle>My Skills</SectionTitle>
-                <FlexWrapper justify={"space-evenly"} wrap={"wrap"}>
+                <FlexWrapper justify={"space-evenly"} wrap={"wrap"} >
                     <Skill iconId={"figma"}
                         width={"100px"}
-                        height={"100px"} />
+                        height={"100px"}/>
                     <Skill iconId={"html5"}
                         width={"100px"}
                         height={"100px"} />
@@ -24,6 +24,9 @@ export const Skills = () => {
                         width={"100px"}
                         height={"100px"} />
                     <Skill iconId={"reacts"}
+                        width={"100px"}
+                        height={"100px"} />
+                    <Skill iconId={"styledComponents"}
                         width={"100px"}
                         height={"100px"} />
                 </FlexWrapper>

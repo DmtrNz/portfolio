@@ -37,9 +37,10 @@ const StyledHeaderMenu = styled.nav`
 `
 
 const Link = styled.a`
+    color: rgba(103, 108, 219, 0.2);
     font-family: "Poppins", sans-serif;
     font-weight: 500;
-    font-size: 25px; 
+    font-size: 20px; 
     text-align: center;
 `
 
