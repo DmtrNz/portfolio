@@ -15,8 +15,6 @@ export const Main = () => {
                         <SmallText>Hello!</SmallText>
                         <SmallText>I'm Nazarov Dmitry</SmallText>
                         <MainTitle>I am a <strong>Frontend developer</strong> based in Belarus <strong>with 2+ years of experience</strong> who loves creating React applications using TypeScript.</MainTitle>
-                        {/* <a href="#" target=".blank">Email me</a>
-                        <a href="#" target=".blank">Dowmload CV</a> */}
                         <FlexWrapper margin={"50px 0 0 0 "}>
                             <LinkMe href="#" target=".blank">
                                 <Icon iconId={"email"} width={"20px"} height={"20px"}/>
@@ -50,9 +48,9 @@ const LinkMe = styled.a`
     span{
         padding: 0 0 0 10px;
         font-weight: 400;
-        font-size: 20px;
+        font-size: 18px;
         line-height: 1.2;
-        margin-right: 25px;
+        margin-right: 20px;
     }
 
     &:hover{
