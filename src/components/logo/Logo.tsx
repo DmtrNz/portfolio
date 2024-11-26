@@ -12,6 +12,9 @@ export const Logo = () => {
 }
 
 const StyledLogo = styled.a`
+    position: relative;
+    z-index: 3;
+    
     &:hover{
             transition: 0.5s;
             transform: scale(1.15);

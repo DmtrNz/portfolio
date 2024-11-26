@@ -5,29 +5,39 @@ import { FlexWrapper } from "../../../components/FlexWrapper";
 import { Container } from "../../../styles/Container";
 import { theme } from "../../../styles/Theme";
 import { Icon } from "../../../components/ icon/Icon";
+import { font } from "../../../styles/Common";
+
+const StyledFlexMobileWrapper = styled(FlexWrapper)`
+    @media ${theme.media.mobile}{
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        /* align-items: center; */
+        // flex-wrap: wrap;
+    }
+`;
 
 export const Main = () => {
     return (
         <StyledMain>
             <Container>
-                <FlexWrapper align={"center"} justify={"space-between"} direction={"row"}>
+                <StyledFlexMobileWrapper align={"center"} justify={"space-between"} direction={"row"}>
                     <div>
                         <SmallText>Hello!</SmallText>
                         <SmallText>I'm Nazarov Dmitry</SmallText>
-                        <MainTitle>I am a <strong>Frontend developer</strong> based in Belarus <strong>with 2+ years of experience</strong> who loves creating React applications using TypeScript.</MainTitle>
-                        <FlexWrapper margin={"50px 0 0 0 "}>
+                        <MainTitle>I am a <strong>Frontend</strong> <strong>developer</strong> based in Belarus <strong>with 2+ years of experience</strong> who loves creating React applications using TypeScript.</MainTitle>
+                        <FlexWrapper wrap={"wrap"} >
                             <LinkMe href="#" target=".blank">
                                 <Icon iconId={"email"} width={"20px"} height={"20px"}/>
                                 <span>Email me</span>
                             </LinkMe>
                             <LinkMe href="#" target=".blank">
                                 <Icon iconId={"download"} width={"20px"} height={"20px"}/>
-                                <span>Dowmload CV</span>
+                                <span>Download CV</span>
                             </LinkMe>
                         </FlexWrapper>
                     </div>
                     <Photo src={photo} alt="Nazarov Dmitry" />
-                </FlexWrapper>
+                </StyledFlexMobileWrapper>
             </Container>
         </StyledMain>
     )
@@ -37,6 +47,7 @@ const StyledMain = styled.section`
     min-height: 100vh; 
     background-color: #fff5e7;
     display:  flex; 
+    padding-top: 0px;
 `
 
 const LinkMe = styled.a`
@@ -50,7 +61,11 @@ const LinkMe = styled.a`
         font-weight: 400;
         font-size: 18px;
         line-height: 1.2;
-        margin-right: 20px;
+        margin-right: 18px;
+
+        @media ${theme.media.mobile}{
+            font-size: 14px;
+    }
     }
 
     &:hover{
@@ -70,14 +85,21 @@ const Photo = styled.img`
     max-width: 50%;
     max-height: 743px;
     object-fit: cover;
+
+    @media ${theme.media.mobile}{
+        max-width: 100vw;
+        height: 450px;
+        object-fit: cover;
+    }
 `
 
 const MainTitle = styled.h1`
+    text-align: justify;
     font-weight: 400;
     font-size: 20px;
     color: rgba(255, 255, 255, 0.6);
     letter-spacing: 0.05em;
-    margin: 10px  0;
+    margin: 10px  0 50px;
 
     strong{
         position: relative;
@@ -99,13 +121,14 @@ const MainTitle = styled.h1`
 `
 
 const SmallText = styled.h2`
-    font-family: "Playfair Display", sans-serif;
-    font-weight: 700;
-    font-size: 90px;
-    line-height: 120%;
+    ${font({family: "'Playfair Display', sans-serif", weight: 700, Fmax: 90, Fmin: 50})};
 
     &:nth-of-type(2) {
         position: relative;
-        width: 150%;
+        width: 190%;
+
+        @media ${theme.media.mobile}{
+            width: 86vw;
+        }
     }
 `

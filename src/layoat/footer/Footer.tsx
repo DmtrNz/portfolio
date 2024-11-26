@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { Container } from "../../styles/Container";
 import { FlexWrapper } from "../../components/FlexWrapper";
 import { theme } from "../../styles/Theme";
+import { font } from "../../styles/Common";
 
 export const Footer = () => {
     return (
@@ -18,12 +19,13 @@ export const Footer = () => {
 
 const StyledFooter = styled.div`
     background-color: ${theme.colors.secondaryBg};
-    font-family: "Poppins", sans-serif;
+    /* font-family: "Poppins", sans-serif;
     font-weight: 500;
-    font-size: 20px;
-    line-height: 180%;
+    font-size: 20px; */
+    /* line-height: 180%; */
     letter-spacing: 0.02em;
     text-align: center;
+    ${font({weight: 500, lineHeight: 1.8, Fmax: 20, Fmin: 14})};
     color: rgba(255, 255, 255, 0.5);
 
     small{

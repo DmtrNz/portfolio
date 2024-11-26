@@ -39,6 +39,10 @@ export const GlobalStyle = createGlobalStyle`
 
     section{
         padding: 100px 0;
+
+        @media ${theme.media.mobile}{
+            padding: 60px 0;
+        }
     }
 
     section:nth-of-type(1) {

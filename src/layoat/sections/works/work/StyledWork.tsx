@@ -1,4 +1,5 @@
 import styled from 'styled-components'; 
+import { theme } from '../../../../styles/Theme';
 
 type SyledWorkPropsType = {
     backgroundColor?: string;
@@ -27,5 +28,11 @@ export const StyledWork = styled.div<SyledWorkPropsType>`
         font-size: 20px;
         font-weight: bold;
         margin: 5px 0;
+    }
+
+    @media ${theme.media.mobile} {
+        justify-content: flex-end;
+        align-items: flex-start;
+        width: 90%;
     }
 `

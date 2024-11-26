@@ -18,10 +18,11 @@ export const Skill = (props: SkillPropsType) => {
 }
 
 const StyledSkill = styled.div`
-    width: 210px;
+    width: 180px;
     padding: 40px;
     display: flex;
     justify-content: center;
+    flex-grow: 1;
     opacity: 0.5;
     
     &:hover{

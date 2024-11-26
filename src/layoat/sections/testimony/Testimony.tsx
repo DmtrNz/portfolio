@@ -7,16 +7,22 @@ import { Statistics } from './Statistics';
 import { Container } from '../../../styles/Container';
 import { theme } from '../../../styles/Theme';
 
+const StyledFlexMobileWrapper = styled(FlexWrapper)`
+    @media ${theme.media.mobile}{
+        flex-direction: column-reverse;
+    }
+`;
+
 export const Testimony = () => {
     return (
         <StyledTestimony>
             <Container>
-                <FlexWrapper>
+                <StyledFlexMobileWrapper>
                     <Photo src={photo} />
-                        <FlexWrapper direction={"column" } justify={"center"}>
-                            <FlexWrapper direction={"column" } justify={"center"} margin={"0 40px 20px 15px"}>
-                                <Icon iconId={"quotes"} />
-                                <StyledReview>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent </StyledReview>
+                    <FlexWrapper direction={"column"} justify={"center"}>
+                        <FlexWrapper direction={"column"} justify={"center"} margin={"0 40px 20px 15px"}>
+                            <Icon iconId={"quotes"} />
+                            <StyledReview>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eu turpis molestie, dictum est a, mattis tellus. Sed dignissim, metus nec fringilla accumsan, risus sem sollicitudin lacus, ut interdum tellus elit sed risus. Maecenas eget condimentum velit, sit amet feugiat lectus. Class aptent taciti sociosqu ad litora torquent </StyledReview>
                             <FlexWrapper margin={"0 0 0 15px"}>
                                 <FlexWrapper>
                                     <button>
@@ -30,7 +36,7 @@ export const Testimony = () => {
                         </FlexWrapper>
                     </FlexWrapper >
                     <Statistics satisfaction={"100%"} numberOfClients={"+0"} numberOfProjects={"1.5"} />
-                </FlexWrapper>
+                </StyledFlexMobileWrapper>
             </Container>
         </StyledTestimony>
     )
@@ -52,6 +58,10 @@ const Photo = styled.img`
     max-height: 743px;
     object-fit: cover;
     margin-bottom: 60px;
+
+    @media ${theme.media.mobile}{
+        order: 0;
+    }
 `
 
 const StyledReview = styled.p`

@@ -22,3 +22,5 @@ export const Work = (props: WorkPropsType) => {
         </StyledWork>
     )
 }
+
+

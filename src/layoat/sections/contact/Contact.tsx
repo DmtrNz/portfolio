@@ -3,12 +3,19 @@ import { FlexWrapper } from '../../../components/FlexWrapper';
 import { Connect } from './Connect';
 import { Form } from './Form';
 import { Container } from '../../../styles/Container';
+import { theme } from '../../../styles/Theme';
+
+const StyledFlexMobileWrapper = styled(FlexWrapper)`
+    @media ${theme.media.mobile}{
+        flex-direction: column-reverse;
+    }
+`;
 
 export const Contact = () => {
     return (
         <StyledContact>
             <Container>
-                <FlexWrapper  justify={"space-between"} wrap={"wrap"}>
+                <StyledFlexMobileWrapper  justify={"space-between"} wrap={"wrap"}>
                     <FlexWrapper direction={"column"} margin={"0 30px 0 0"}>
                         <StyledTitleContactBox>
                             <SectionTitleContact>Let's <br></br> Connect</SectionTitleContact>
@@ -32,7 +39,7 @@ export const Contact = () => {
                         </FlexWrapper>
                     </FlexWrapper>
                     <Form />
-                </FlexWrapper>
+                </StyledFlexMobileWrapper>
             </Container>
         </StyledContact> 
     )

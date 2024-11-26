@@ -18,8 +18,8 @@ export const Header = () => {
 }
 
 const StyledHeader = styled.header`
-    background-color: rgba(31,31,32,0.0);
-    padding: 20px 0;
+    background-color: rgba(31,31,32,0.55);
+    padding: 0;
     position: fixed;
     top: 0;
     left: 0;
