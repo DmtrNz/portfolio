@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { FlexWrapper } from '../../../components/FlexWrapper';
 import { theme } from "../../../styles/Theme";
 import { Icon } from "../../../components/ icon/Icon";
+import { font } from '../../../styles/Common';
 
 export const Form = () => {
     return (
@@ -27,16 +28,19 @@ const Styledform = styled.form`
     font-size: 30px;
     line-height: 120%;
     margin-bottom: 50px;
+    @media ${theme.media.mobile}{
+        ${font({Fmax: 30, Fmin: 20})};
+    }
 
     input{
         width: 100%;
         background-color: transparent;
         border: none;
         border-bottom: 1px solid white;
-        color: ${theme.colors.font};
-        font-size: 20px;
         padding: 10px 0;
         margin-bottom: 20px;
+        color: ${theme.colors.font};
+        font-size: 20px;
 
         &:focus {
             outline: none;
@@ -50,7 +54,7 @@ const Styledform = styled.form`
         border: none;
         border-bottom: 1px solid white;
         font-size: 20px;
-        padding: 10px 0;
+        padding: 10px 0 0;
         margin-bottom: 20px;
         resize: none;
         color: ${theme.colors.font};

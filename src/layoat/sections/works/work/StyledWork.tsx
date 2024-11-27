@@ -30,6 +30,12 @@ export const StyledWork = styled.div<SyledWorkPropsType>`
         margin: 5px 0;
     }
 
+    @media ${theme.media.desctopeToTablet} {
+        justify-content: flex-end;
+        align-items: flex-start;
+        width: 90%;
+    }
+
     @media ${theme.media.mobile} {
         justify-content: flex-end;
         align-items: flex-start;

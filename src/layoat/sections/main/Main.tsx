@@ -11,8 +11,6 @@ const StyledFlexMobileWrapper = styled(FlexWrapper)`
     @media ${theme.media.mobile}{
         flex-direction: column-reverse;
         justify-content: flex-end;
-        /* align-items: center; */
-        // flex-wrap: wrap;
     }
 `;
 
@@ -88,7 +86,7 @@ const Photo = styled.img`
 
     @media ${theme.media.mobile}{
         max-width: 100vw;
-        height: 450px;
+        height: 450px; 
         object-fit: cover;
     }
 `
@@ -130,5 +128,10 @@ const SmallText = styled.h2`
         @media ${theme.media.mobile}{
             width: 86vw;
         }
+    }
+
+    @media screen and (min-width: 1200px) {
+        max-width: 1150px; 
+        font-size: 90px;
     }
 `

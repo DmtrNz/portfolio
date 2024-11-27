@@ -32,4 +32,8 @@ export const SectionTitle = styled.h2`
             bottom: -10px;
         }
     }
+    
+    @media screen and (min-width: 1000px) {
+        font-size: 40px;
+    }
 `

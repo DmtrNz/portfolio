@@ -4,10 +4,11 @@ import { Connect } from './Connect';
 import { Form } from './Form';
 import { Container } from '../../../styles/Container';
 import { theme } from '../../../styles/Theme';
+import { font } from '../../../styles/Common';
 
 const StyledFlexMobileWrapper = styled(FlexWrapper)`
     @media ${theme.media.mobile}{
-        flex-direction: column-reverse;
+        flex-direction: column;
     }
 `;
 
@@ -59,10 +60,9 @@ const StyledTitleContactBox = styled.div`
 `
 
 const SectionTitleContact = styled.h2`
-    font-family: "Poppins", sans-serif;
-    font-weight: bold;
-    letter-spacing: 3px;
-    font-weight: 700;
-    font-size: 90px;
-    line-height: 120%;
+    ${font({family: "'Poppins', sans-serif", weight: 700, Fmax: 80, Fmin: 50})};
+
+    @media screen and (min-width: 1200px) {
+        font-size: 80px;
+    }
 `

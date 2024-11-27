@@ -8,6 +8,7 @@ type FlexWrapperPropsType = {
     gap?: string;
     position?: string;
     margin?: string;
+    order?: string;
 }
 
 export const FlexWrapper = styled.div<FlexWrapperPropsType>`
@@ -19,4 +20,5 @@ export const FlexWrapper = styled.div<FlexWrapperPropsType>`
     gap: ${props=> props.gap || "10px"};
     margin: ${props=> props.margin || "0"};
     height: 100%;
+    order: ${props=> props.order || "0"};
 `
