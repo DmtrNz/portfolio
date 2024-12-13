@@ -18,8 +18,8 @@ export const Skill = (props: SkillPropsType) => {
 }
 
 const StyledSkill = styled.div`
-    width: 180px;
-    padding: 40px;
+    width: 130px;
+    padding: 10px;
     display: flex;
     justify-content: center;
     flex-grow: 1;

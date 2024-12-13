@@ -26,16 +26,20 @@ export const Contact = () => {
                             <ConnectBox>
                                 <Connect iconId={"telegram"}
                                     width={"25px"}
-                                    height={"25px"} />
+                                    height={"25px"} 
+                                    viewBox={"0 0 25 25"}/>
                                 <Connect iconId={"vk"}
                                     width={"25px"}
-                                    height={"25px"} />
+                                    height={"25px"} 
+                                    viewBox={"0 0 25 25"}/>
                                 <Connect iconId={"linkedin"}
                                     width={"25px"}
-                                    height={"25px"} />
+                                    height={"25px"} 
+                                    viewBox={"0 0 25 25"}/>
                                 <Connect iconId={"gitHub"}
                                     width={"25px"}
-                                    height={"25px"} />
+                                    height={"25px"} 
+                                    viewBox={"0 0 25 25"}/>
                             </ConnectBox>
                         </FlexWrapper>
                     </FlexWrapper>

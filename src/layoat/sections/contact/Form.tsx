@@ -9,13 +9,22 @@ export const Form = () => {
     return (
         <Styledform action="">
             <FlexWrapper direction={"column"}>
-                <label htmlFor=""></label>
-                Your name:<input type="text" />
-                Your email  address:<input type="text" />
-                Tell about the project:<textarea name="" id=""></textarea>
+                <label htmlFor="name1">
+                    Your name:
+                    <input id="name1" type="text" />
+                </label>
+                <label htmlFor="name2">
+                    Your email  address:
+                    <input id="name2" type="text" />
+                </label>
+                <label htmlFor="name3">
+                    Tell about the project:
+                    <br></br>
+                    <textarea id="name3"></textarea>
+                </label>
                 <button>
                     <span>Send</span>
-                    <Icon iconId={"arrowRight"} />
+                    <Icon iconId={"arrowRight"} width={"40"} height={"40"} viewBox={"0 0 40 40"}/>
                 </button>
             </FlexWrapper>
         </Styledform>
@@ -50,6 +59,7 @@ const Styledform = styled.form`
     }
 
     textarea{
+        width: 100%;
         background-color: transparent;
         border: none;
         border-bottom: 1px solid white;

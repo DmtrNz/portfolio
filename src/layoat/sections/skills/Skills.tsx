@@ -13,22 +13,28 @@ export const Skills = () => {
                 <FlexWrapper justify={"space-evenly"} wrap={"wrap"} >
                     <Skill iconId={"figma"}
                         width={"100px"}
-                        height={"100px"}/>
+                        height={"100px"} 
+                        viewBox={"0 0 100 100"}/>
                     <Skill iconId={"html5"}
                         width={"100px"}
-                        height={"100px"} />
+                        height={"100px"} 
+                        viewBox={"0 0 100 100"}/>
                     <Skill iconId={"css3"}
                         width={"100px"}
-                        height={"100px"} />
+                        height={"100px"} 
+                        viewBox={"0 0 100 100"}/>
                     <Skill iconId={"sass"}
                         width={"100px"}
-                        height={"100px"} />
+                        height={"100px"} 
+                        viewBox={"0 0 100 100"}/>
                     <Skill iconId={"reacts"}
                         width={"100px"}
-                        height={"100px"} />
+                        height={"100px"} 
+                        viewBox={"0 0 100 100"}/>
                     <Skill iconId={"styledComponents"}
                         width={"100px"}
-                        height={"100px"} />
+                        height={"100px"} 
+                        viewBox={"0 0 100 100"}/>
                 </FlexWrapper>
             </Container>
         </StyledSkills>

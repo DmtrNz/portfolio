@@ -7,13 +7,17 @@ type ConnectPropsType ={
     iconId: string;
     width?: string;
     height?: string;
+    viewBox?: string;
 }
 
 export const Connect = (props: ConnectPropsType) => {
     return (
         <StyledSContact>
             <a>
-                <Icon iconId={props.iconId} width={props.width} height={props.height}/>
+                <Icon iconId={props.iconId} 
+                    width={props.width} 
+                    height={props.height}
+                    viewBox={props.viewBox}/>
             </a>
         </StyledSContact> 
     )

@@ -25,11 +25,17 @@ export const Main = () => {
                         <MainTitle>I am a <strong>Frontend</strong> <strong>developer</strong> based in Belarus <strong>with 2+ years of experience</strong> who loves creating React applications using TypeScript.</MainTitle>
                         <FlexWrapper wrap={"wrap"} >
                             <LinkMe href="#" target=".blank">
-                                <Icon iconId={"email"} width={"20px"} height={"20px"}/>
+                                <Icon iconId={"email"} 
+                                width={"20px"} 
+                                height={"20px"} 
+                                viewBox={"0 0 20 20"}/>
                                 <span>Email me</span>
                             </LinkMe>
                             <LinkMe href="#" target=".blank">
-                                <Icon iconId={"download"} width={"20px"} height={"20px"}/>
+                                <Icon iconId={"download"} 
+                                width={"20px"} 
+                                height={"20px"} 
+                                viewBox={"0 0 20 20"}/>
                                 <span>Download CV</span>
                             </LinkMe>
                         </FlexWrapper>
@@ -85,7 +91,7 @@ const Photo = styled.img`
     object-fit: cover;
 
     @media ${theme.media.mobile}{
-        max-width: 100vw;
+        max-width: 95vw;
         height: 450px; 
         object-fit: cover;
     }
@@ -130,8 +136,8 @@ const SmallText = styled.h2`
         }
     }
 
-    @media screen and (min-width: 1200px) {
+    /* @media screen and (min-width: 1200px) {
         max-width: 1150px; 
         font-size: 90px;
-    }
+    } */
 `
